@@ -1,0 +1,409 @@
+*{
+    margin: 0px;
+   
+    box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar{
+    display: none; /* to hide scroll bar but can scroll the screen */
+    
+}
+.container{
+    /* position: relative; */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);/* 0, 0, 0: These are the red, green, and blue color components, respectively. In this case, all three are set to 0, resulting in black.
+    0.4: This is the alpha (a) component, representing the level of transparency. The alpha value is specified as a number between 0 (completely transparent) and 1 (completely opaque). In this case, it's set to 0.4, indicating that the black background will be 40% transparent. 
+    the overall effect is a semi-transparent black background with 40% opacity.*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+nav{
+    position: fixed;
+    height: 60px;
+    top: 0; 
+    /* top: 0;: This property sets the distance between the top edge of the element and the top edge of its containing element or the browser window. In this case, top: 0; means the element (in this case, your nav) will be fixed to the top of the viewport. */
+    left: 0;
+    /* left: 0;: This property sets the distance between the left edge of the element and the left edge of its containing element or the browser window. left: 0; means the element will be fixed to the left side of the viewport. */
+    width: 100%;
+    /* when you combine these properties, you're effectively making the nav element fixed at the top-left corner of the viewport and span the entire width of the viewport. This is a common technique to create fixed navigation bars that remain at the top of the page as the user scrolls down.*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-left: 100px; */
+    background-color: rgba(0, 0, 0, 0); /* to show nav transparent  */
+    z-index: 1000;
+   
+    
+
+  
+ 
+}
+
+.logo{
+   
+    /* mix-blend-mode: multiply; */
+    padding-left: 30px;
+    padding-top: 35px;
+    height: 100px;
+    width: 100px;
+    
+
+}
+.list-items{
+    display: inline; /* for show element in row */
+    list-style: none; /* for not showing unodered list symbel (.)   */
+    margin: 0px 70px;
+   
+   
+}
+.links{
+    padding-top: 35px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Caveat', cursive;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-family: 'Caveat', cursive;
+    font-family: 'Cute Font', sans-serif;
+    font-size: 90px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.content a{
+    font-size: 23px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 50px;/*  for shape */
+    padding: 15px 25px;/* The first value (15px) corresponds to the top and bottom padding.
+    The second value (25px) corresponds to the right and left padding. */
+    transition: 0.3s; /* hover transition time */
+
+}
+.content a:hover{
+    background-color: #fff;
+    color: black;
+}
+.background-clip{
+   
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* These media queries help ensure that the background video adapts to different screen sizes and maintains a visually appealing display. */
+@media(min-aspect-ratio:16/9){
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+
+}
+@media(max-aspect-ratio:16/9){
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+
+}
+
+/* 2nd div */
+.categories{
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+   
+}
+
+.col{
+    width: 10%;
+    height: 200px;
+    border: 2px solid black ;
+    
+    border-radius: 20px;
+    transition: 1s;/* hover effect will be 1s    */
+
+
+}
+/* for give hover effect to the image container */
+.col:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+#dish-img{
+    width: 100%;
+    height: 80%;
+    border-radius: 20px;
+
+
+}
+#link{
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: olivedrab;
+    margin: 55px;
+    font-size: 25px;
+}
+    
+/* 3rd div */
+.elements{
+    background-color:#77628c ;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    
+
+}
+.about{
+    
+    width: 50%;
+    height: 580px;
+    
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 30px;
+
+}
+.profile-pic{
+    width: 50%;
+    height: 580px;
+   
+    padding: 30px;
+    
+
+}
+#chef-img{
+    width: 70%;
+    height: 500px;
+    border-radius: 30%;
+    margin-left: 150px;
+    transition: 1s;/* hover effect will be 1s */
+
+    
+}
+#chef-img:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+/* div 4 */
+.breakfast{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.col1{
+    background-color: white;
+    width:20%;
+    height: 600px;
+    border: 1px solid  rgb(194, 243, 194);
+    border-radius: 20px;
+    transition: 1s;/* hover effect will be 1s    */
+    position: relative;
+    box-shadow: 15px 15px gray;
+
+}
+#breakfast-img{
+    width: 100%;
+    height: 70%;
+    
+    margin-top: 50px;
+}
+#breakfast-headding,#lunch-headding{
+    text-align: center;
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+   
+}
+.breakfast a {
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 6px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom:30px;/* Adjust this value to set the desired distance below the image */
+    left: 50%;
+    transform: translateX(-50%);/*translateX(-50%): This particular function translates (moves) the element horizontally along the X-axis. The value -50% means it will be moved 50% of its own width to the left  */
+   
+}
+
+.col1:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+/* div 5 */
+.lunch,.dessert,.meat,.snacks{
+    width: 100%;
+    height: 100vh;
+    background-color:#a2a8d3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.col2,.col3,.col4,.col5{
+    width: 19%;
+    height: 500px;
+    background-color: white;
+    border: 2px solid a2a8d3;
+    position: relative;
+    box-shadow: 15px 15px black;
+    border-radius: 10px;
+    transition: 1s;/* hover effect will be 1s    */
+
+}
+.col2:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+.col3:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+.col4:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+.col5:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+.food-img{
+    width: 100%;
+    height: 70%;
+    margin-top: 50px;
+
+}
+.food-headding{
+    text-align: center;
+    margin-top: 20px;
+}
+.lunch a{
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 6px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    bottom:30px;/* Adjust this value to set the desired distance below the image */
+    left: 50%;
+    transform: translateX(-50%);/*translateX(-50%): This particular function translates (moves) the element horizontally along the X-axis. The value -50% means it will be moved 50% of its own width to the left  */
+    border-radius: 9px;
+}
+/* div 6 */
+.dessert a{
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 6px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    bottom:30px;/* Adjust this value to set the desired distance below the image */
+    left: 50%;
+    transform: translateX(-50%);/*translateX(-50%): This particular function translates (moves) the element horizontally along the X-axis. The value -50% means it will be moved 50% of its own width to the left  */
+    border-radius: 9px;
+}
+/* div 7 */
+.meat a{
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 6px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    bottom:30px;/* Adjust this value to set the desired distance below the image */
+    left: 50%;
+    transform: translateX(-50%);/*translateX(-50%): This particular function translates (moves) the element horizontally along the X-axis. The value -50% means it will be moved 50% of its own width to the left  */
+    border-radius: 9px;
+
+}
+/* div 8 */
+.snacks a{
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 6px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    bottom:30px;/* Adjust this value to set the desired distance below the image */
+    left: 50%;
+    transform: translateX(-50%);/*translateX(-50%): This particular function translates (moves) the element horizontally along the X-axis. The value -50% means it will be moved 50% of its own width to the left  */
+    border-radius: 9px;
+
+}
+
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.col6{
+    width: 30%;
+    height: 60%;
+    background-color:black;
+    border: 1px solid ;
+   
+   
+}
+#footer-ul li a:hover img {
+    transition: 1s;/* hover effect will be 1s    // Add hover effect styles for the logos */
+    transform: scale(1.3);
+  
+}
+#footer-img{
+    width: 100%;
+    height: 70%;
+    border-radius: 30px;
+}
+#insta,#discord,#youtube{
+    margin-top: 190px;
+    height:70px ;
+    width: 70px;
+    border-radius: 40%;
+}
+
+ul {
+    list-style: none; /* remove unorderd list symbol  */
+    padding: 0; /* Optional: Remove default padding */
+    margin-top: 90; /* Optional: Remove default margin */
+    display: flex;
+    justify-content: space-evenly;
+   align-items:center;
+}
+
+#social-text{
+    text-align: center;
+}
